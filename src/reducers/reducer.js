@@ -1,4 +1,4 @@
-import { REMOVE_FROM_BASKET_ACTION,ADD_TO_BASKET_ACTION,GET_DATA,CART_IS_OPEN } from '../actions/actions';
+import { REMOVE_FROM_BASKET_ACTION,ADD_TO_BASKET_ACTION,GET_DATA,CART_IS_OPEN,RESET_ORDER,FINISH_CART_POST } from '../actions/actions';
 
 const initialState = {
     itemsData: null,
@@ -6,9 +6,11 @@ const initialState = {
     message: null,
     cartQuantity: 0,
     cartIsOpen: false,
+    finishCartPost: ''
 }
 
 const reducer = (state = initialState,action) => {
+    console.log(state.order)
     switch (action.type) {
         case CART_IS_OPEN:
             return {
@@ -71,6 +73,16 @@ const reducer = (state = initialState,action) => {
                         cartQuantity: state.cartQuantity + 1
                     }
                 }
+            }
+        case FINISH_CART_POST:
+            return {
+                ...state,
+                finishCartPost: action.payload
+            }
+        case RESET_ORDER:
+            return {
+                ...state,
+                order: [],
             }
         default:
             return state;

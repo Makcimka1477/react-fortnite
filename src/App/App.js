@@ -12,10 +12,6 @@ import Footer from "../Components/Footer";
 import Home from "../pages/Home";
 import PageNotFound from '../pages/PageNotFound';
 
-// ПРИ СЖАТИИ CART ПРИЖИМАЕТСЯ К ПРАВОМУ КРАЮ
-// КАРТИНКИ В ФУТТЕРЕ
-// НОВЫЙ ROUTE ДЛЯ КОРЗИНУ
-// ПЕРЕХОД К ИНФЕ ПРИ КЛИКЕ НА КАРТИНКУ
 
 function App () {
   return (

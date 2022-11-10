@@ -5,6 +5,7 @@ import { useContext, useState } from "react";
 import Portal from "../../Portal";
 import Message from "../../Message";
 import { MyShopContext } from "../../../context/context";
+import ErrorBoundary from "../../ErrorBoundary/ErrorBoundary";
 
 const Items = () => {
 	const {

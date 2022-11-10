@@ -4,10 +4,12 @@ import useFetch from '../../hooks/useFetch';
 
 import Items from './Items';
 import Preloader from '../Preloader';
+import ErrorBoundary from "../ErrorBoundary/ErrorBoundary";
 
 import reducer from "../../reducers/reducer";
 import { addItemToBasket,removeItemFromBasket,getData } from "../../actionCreators/actionCreators";
 import { MyShopContext } from '../../context/context';
+
 
 const Shop = () => {
   const [state,dispatch] = useReducer(reducer);
